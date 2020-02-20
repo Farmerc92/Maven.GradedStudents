@@ -42,7 +42,7 @@ public class Classroom {
 
     public void removeStudent(String firstName, String lastName){
         int count = 0;
-        for (Student s : students) {
+        for (Student s : this.students) {
             if(s.getFirstName() == firstName && s.getLastName() == lastName){
                 break;
             }

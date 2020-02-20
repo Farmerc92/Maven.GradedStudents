@@ -1,7 +1,6 @@
 package io.zipcoder;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Student{
     private String firstName;
@@ -62,7 +61,7 @@ public class Student{
         for(double d : examScores){
             sum += d;
         }
-        return (int) sum / examScores.size();
+        return  sum / examScores.size();
     }
     @Override
     public String toString(){

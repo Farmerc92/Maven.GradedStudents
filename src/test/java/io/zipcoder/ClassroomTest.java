@@ -3,6 +3,7 @@ package io.zipcoder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
@@ -117,17 +118,31 @@ public class ClassroomTest {
 
         Student student2 = new Student("Steve", "Jackson", examScores1);
 
-        Double[] examScores3 = { 90.0, 150.0, 250.0, 0.0 };
-        Student student3 = new Student("Bob", "Dole", examScores3);
+        Double[] examScores3 = { 1000.0, 150.0, 250.0, 0.0 };
+        Student student3 = new Student("John", "Guy", examScores3);
 
         Student[] studentArray = new Student[4];
         studentArray[0] = student;
         studentArray[1] = student1;
         studentArray[2] = student2;
         studentArray[3] = student3;
+//        ArrayList<Student> array = new ArrayList<>();
+//        for(Student s : studentArray){
+//            array.add(s);
+//            System.out.println(s);
+//        }
 
         Classroom classroom2 = new Classroom(studentArray);
 
         Student[] byScore = classroom2.getStudentsByScore();
+
+//        for (Student s :
+//                byScore) {
+//            System.out.println(s);
+//        }
+        Assert.assertEquals(student3, byScore[0]);
+        Assert.assertEquals(student, byScore[1]);
+        Assert.assertEquals(student1, byScore[2]);
+        Assert.assertEquals(student2, byScore[3]);
     }
 }

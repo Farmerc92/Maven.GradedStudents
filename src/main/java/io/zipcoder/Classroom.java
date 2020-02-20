@@ -1,5 +1,9 @@
 package io.zipcoder;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Classroom {
     private Student[] students;
 
@@ -57,8 +61,15 @@ public class Classroom {
     }
 
     public Student[] getStudentsByScore() {
-        Student[] byScore = new Student[students.length];
-        return students;
+
+        ArrayList<Student> array = new ArrayList<>();
+        for (Student s : students) {
+            array.add(s);
+        }
+        Collections.sort(array, new Sortbylastname());
+        Collections.sort(array, new Sortbygrade());
+        return array.toArray(new Student[students.length]);
+
     }
 
 }

@@ -127,20 +127,12 @@ public class ClassroomTest {
         studentArray[1] = student1;
         studentArray[2] = student2;
         studentArray[3] = student3;
-//        ArrayList<Student> array = new ArrayList<>();
-//        for(Student s : studentArray){
-//            array.add(s);
-//            System.out.println(s);
-//        }
 
         Classroom classroom2 = new Classroom(studentArray);
 
         Student[] byScore = classroom2.getStudentsByScore();
 
-//        for (Student s :
-//                byScore) {
-//            System.out.println(s);
-//        }
+
         Assert.assertEquals(student3, byScore[0]);
         Assert.assertEquals(student, byScore[1]);
         Assert.assertEquals(student1, byScore[2]);

@@ -65,7 +65,7 @@ public class ClassroomTest {
     @Test
     public void addStudentTest(){
         // : Given
-        int maxNumberOfStudents = 1;
+        int maxNumberOfStudents = 0;
         Classroom classroom = new Classroom(maxNumberOfStudents);
         Double[] examScores = { 100.0, 150.0, 250.0, 0.0 };
         Student student = new Student("Leon", "Hunter", examScores);

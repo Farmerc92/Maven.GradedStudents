@@ -36,6 +36,11 @@ public class Classroom {
 
     public void addStudent(Student student){
         Student[] newStudents = new Student[students.length+1];
+        int index = 0;
+        for (Student s : students) {
+            newStudents[index] = s;
+            index++;
+        }
         newStudents[newStudents.length-1] = student;
         students = newStudents;
     }

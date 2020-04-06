@@ -52,3 +52,6 @@ fabric.properties
 .project
 .classpath
 .settings
+
+target
+.travis.yml
